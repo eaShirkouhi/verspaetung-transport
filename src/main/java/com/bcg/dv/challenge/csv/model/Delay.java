@@ -8,6 +8,6 @@ import lombok.Getter;
 @Builder
 @Getter
 public class Delay {
-    private String lineName;
-    private int delay;
+    private final String lineName;
+    private final int delay;
 }

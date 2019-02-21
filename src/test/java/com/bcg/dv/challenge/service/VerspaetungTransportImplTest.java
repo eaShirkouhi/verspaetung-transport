@@ -44,9 +44,15 @@ public class VerspaetungTransportImplTest {
     }
 
     @Test
-    public void shouldIndicateIfGivenLineIsCurrentlyDelayed() throws Exception {
+    public void shouldReturnDelayedTrueIfGivenLineIsCurrentlyDelayed() throws Exception {
         boolean delayed = verspaetungTransport.isLineCurrentlyDelayed("M4", LocalTime.of(10, 8, 0));
         assertThat(delayed).isTrue();
+    }
+
+    @Test
+    public void shouldReturnDelayedFalseIfGivenLineIsCurrentlyNotDelayed() throws Exception {
+        boolean delayed = verspaetungTransport.isLineCurrentlyDelayed("M4", LocalTime.of(10, 9, 0));
+        assertThat(delayed).isFalse();
     }
 
     @Test

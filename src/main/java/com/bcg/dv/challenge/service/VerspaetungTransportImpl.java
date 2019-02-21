@@ -102,6 +102,10 @@ public class VerspaetungTransportImpl implements VerspaetungTransport {
             LocalTime arrivingTime = sortedTimeMap.firstKey();
             LocalTime delayedTime = sortedTimeMap.get(arrivingTime);
 
+            if (currentTime.equals(arrivingTime)) {
+                return false;
+            }
+
             if (currentTime.isAfter(arrivingTime) && (currentTime.isBefore(delayedTime) || currentTime.equals(delayedTime))){
                 return true;
             }

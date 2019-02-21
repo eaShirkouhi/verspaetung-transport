@@ -9,6 +9,6 @@ import lombok.Getter;
 @Getter
 public class Line {
 
-    private int lineId;
-    private String lineName;
+    private final int lineId;
+    private final String lineName;
 }

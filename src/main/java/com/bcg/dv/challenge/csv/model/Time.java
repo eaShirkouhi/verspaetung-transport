@@ -11,7 +11,7 @@ import java.time.LocalTime;
 @Getter
 public class Time {
 
-    private int lineId;
-    private int stopId;
-    private LocalTime time;
+    private final int lineId;
+    private final int stopId;
+    private final LocalTime time;
 }

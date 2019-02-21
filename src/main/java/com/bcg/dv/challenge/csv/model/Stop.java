@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public class Stop {
 
-    private int stopId;
-    private int x;
-    private int y;
+    private final int stopId;
+    private final int x;
+    private final int y;
 }
